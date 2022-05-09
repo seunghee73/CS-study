@@ -278,7 +278,7 @@ Copy-On-Write (COW) : 자식은 부모 자원을 그대로 공유하여 사용�
   - 공평한 것보다 효율적 매커니즘이 중요. intractive job에게 너무 오랜 시간을 기다리게 하면 안됨.
   - 누구에게 우선적, 언제 뺏을 것인가 등이 중요한 이슈
 
-![CPU-burst Time의 분포](C:/Users/YoonJuhye/TIL/cs/os/os_05_CPU Scheduling.assets/CPU-burst Time의 분포.JPG)
+![CPU-burst Time의 분포](week2_os_juhye.assets/CPU-burst Time의 분포.JPG)
 
 - CPU burst가 짧은 경우가 빈번하고 긴 경우도 간혹 나타남
 
@@ -346,7 +346,7 @@ Copy-On-Write (COW) : 자식은 부모 자원을 그대로 공유하여 사용�
 
   스케줄 순서를 Gantt Chart로 나타내면 다음과 같다
 
-  ![The Gantt chart for the schedule 1](C:/Users/YoonJuhye/TIL/cs/os/os_05_CPU Scheduling.assets/The Gantt chart for the schedule 1.JPG)
+  ![The Gantt chart for the schedule 1](week2_os_juhye.assets/The Gantt chart for the schedule 1.JPG)
 
 - Waiting time for P1 = 0; P2 = 24; P3 = 27
 
@@ -362,7 +362,7 @@ Copy-On-Write (COW) : 자식은 부모 자원을 그대로 공유하여 사용�
 
   - The Gantt chart for the schedule is:
 
-    ![The Gantt chart for the schedule 2](C:/Users/YoonJuhye/TIL/cs/os/os_05_CPU Scheduling.assets/The Gantt chart for the schedule 2.JPG)
+    ![The Gantt chart for the schedule 2](week2_os_juhye.assets/The Gantt chart for the schedule 2.JPG)
 
   - wating time for P1 = 6; P2 = 0; P3 = 3
 
@@ -406,7 +406,7 @@ Copy-On-Write (COW) : 자식은 부모 자원을 그대로 공유하여 사용�
 
   - 더 짧은 시간이 도착하면 빼앗길 수 있음
 
-  ![SJF (C:/Users/YoonJuhye/TIL/cs/os/os_05_CPU Scheduling.assets/SJF (preemptive).JPG)](os_05_CPU Scheduling.assets/SJF (preemptive).JPG)
+    ![SJF (preemptive)](week2_os_juhye.assets/SJF (preemptive).JPG)
 
 - Average waiting time = (9+1+0+2)/4=3 (optimal(minimum))
 
@@ -453,15 +453,17 @@ Copy-On-Write (COW) : 자식은 부모 자원을 그대로 공유하여 사용�
 
   (exponential averaging)
 
-  ![(C:/Users/YoonJuhye/TIL/cs/os/os_05_CPU Scheduling.assets/(exponential averaging).JPG)](os_05_CPU Scheduling.assets/(exponential averaging).JPG)
+  ![(exponential averaging)](week2_os_juhye.assets/(exponential averaging).JPG)
 
+  
+  
   - n+1 번째 CPU 사용 예측 시간은 n번째 실제 CPU 사용시간과 n번째 실제 CPU 예측 시간을 일정 비율 곱해서 더해준 값.
 
 
 
 ### Exponential Averaging
 
-![Exponential Averaging](C:/Users/YoonJuhye/TIL/cs/os/os_05_CPU Scheduling.assets/Exponential Averaging.JPG)
+![Exponential Averaging](week2_os_juhye.assets/Exponential Averaging.JPG)
 
 - a와 (1-a)가 둘 다 1 이하이므로 후속 term은 선행 term보다 적은 가중치 값을 가진다
 
@@ -489,7 +491,7 @@ Copy-On-Write (COW) : 자식은 부모 자원을 그대로 공유하여 사용�
 
 ### Example: RR with Time Quantum = 20
 
-​		![RR with Time Quantum = 20](C:/Users/YoonJuhye/TIL/cs/os/os_05_CPU Scheduling.assets/RR with Time Quantum = 20.JPG)
+​		![RR with Time Quantum = 20](week2_os_juhye.assets/RR with Time Quantum = 20.JPG)
 
 - 일반적으로 SJF보다 average turnaround time이 길지만 **response time**은 더 짧다.
 
@@ -497,13 +499,13 @@ Copy-On-Write (COW) : 자식은 부모 자원을 그대로 공유하여 사용�
 
 ### Turnaround Time Varies With Time Quantum
 
-![Turnaround Time Varies With Time Quantum](C:/Users/YoonJuhye/TIL/cs/os/os_05_CPU Scheduling.assets/Turnaround Time Varies With Time Quantum.JPG)
+![Turnaround Time Varies With Time Quantum](week2_os_juhye.assets/Turnaround Time Varies With Time Quantum.JPG)
 
 
 
 ### Multilevel Queue
 
-![Multilevel Queue](C:/Users/YoonJuhye/TIL/cs/os/os_05_CPU Scheduling.assets/Multilevel Queue.JPG)
+![Multilevel Queue](week2_os_juhye.assets/Multilevel Queue.JPG)
 
 system processes : 시스템 프로세스
 
@@ -553,7 +555,7 @@ student processes
 
 ### Multilevel Feedback Queue
 
-![image-20220509153849698](C:/Users/YoonJuhye/TIL/cs/os/os_05_CPU Scheduling.assets/image-20220509153849698.png)
+![image-20220509153849698](week2_os_juhye.assets/image-20220509153849698.png)
 
 - CPU burst가 짧은 프로세스에게 우선순위를 더 많이 주고 긴 프로세스는 점점 밑으로 쫓겨나서 우선순위를 낮춰주는 방법
 - 처음에 들어온 프로세스에게는 무조건 짧은 시간을 주기 때문에, CPU 사용 시간이 긴지 짧은지의 예측이 필요 없음. 
@@ -637,7 +639,7 @@ student processes
 
 ### 데이터의 접근
 
-![image-20220509162106291](C:\Users\YoonJuhye\TIL\cs\os\os_06_Process Synchronization.assets\image-20220509162106291.png)
+![image-20220509162106291](week2_os_juhye.assets/image-20220509162106291.png)
 
 - 데이터가 저장된 위치에서 데이터를 읽어와서 연산을 한 후 그 결과를 저장된 위치에 다시 저장
 
@@ -647,7 +649,7 @@ student processes
 
 ### Race Condition
 
-![image-20220509162236441](C:\Users\YoonJuhye\TIL\cs\os\os_06_Process Synchronization.assets\image-20220509162236441.png)
+![image-20220509162236441](week2_os_juhye.assets/image-20220509162236441.png)
 
 - 여러 주체가 하나의 데이터를 동시에 접근하려고 할 때를 Race Condition(경쟁상태)라고 함
 
@@ -667,7 +669,7 @@ student processes
 
 ### OS에서의 race condition - interrupt handler v.s. kernel
 
-![image-20220509170624311](C:\Users\YoonJuhye\TIL\cs\os\os_06_Process Synchronization.assets\image-20220509170624311.png)
+![image-20220509170624311](week2_os_juhye.assets/image-20220509170624311.png)
 
 - 커널모드 running 중 interrupt가 발생하여 인터럽트 처리루틴이 수행
 
@@ -677,7 +679,7 @@ student processes
 
 ### If you preempt CPU while in kernel mode ...
 
-![image-20220509171012229](C:\Users\YoonJuhye\TIL\cs\os\os_06_Process Synchronization.assets\image-20220509171012229.png)
+![image-20220509171012229](week2_os_juhye.assets/image-20220509171012229.png)
 
 - 해결책 : 커널 모드에서 수행 중일 때는 CPU를 preempt 하지 않음, 커널 모드에서 사용자 모드로 돌아갈 때 preempt
 
@@ -685,7 +687,7 @@ student processes
 
 ### OS에서의 race condition - multiprocessor
 
-![image-20220509171438110](C:\Users\YoonJuhye\TIL\cs\os\os_06_Process Synchronization.assets\image-20220509171438110.png)
+![image-20220509171438110](week2_os_juhye.assets/image-20220509171438110.png)
 
 - 자주 등장하지는 않음
 - 어떤 CPU가 마지막으로 count를 store했는가? -> race condition
@@ -708,7 +710,7 @@ student processes
 
 ### Example of a Race Condition
 
-![image-20220509171959901](C:\Users\YoonJuhye\TIL\cs\os\os_06_Process Synchronization.assets\image-20220509171959901.png)
+![image-20220509171959901](week2_os_juhye.assets/image-20220509171959901.png)
 
 - 사용자 프로세스 P1 수행중 timer interrupt가 발생해서 context switch가 일어나서 P2가 CPU를 잡으면?
 - 두 개의 프로세스가 하나의 공유 데이터에 접근해서 P1은 증가시키고 P2는 감소시키는 경우에, consistency가 깨어지는 불일치 문제 발생
@@ -725,7 +727,7 @@ student processes
 
   - 하나의 프로세스가 critical section에 있을 때 다른 모든 프로세스는 critical section에 들어갈 수 없어야 한다
 
-    ![image-20220509173246559](C:\Users\YoonJuhye\TIL\cs\os\os_06_Process Synchronization.assets\image-20220509173246559.png)
+    ![image-20220509173246559](week2_os_juhye.assets/image-20220509173246559.png)
 
 
 
@@ -856,7 +858,7 @@ student processes
 
 - 하드웨어적으로 Test & modify를 atomic하게 수행할 수 있도록 지원하는 경우 앞의 문제는 간단히 해결
 
-  ![image-20220509202646474](C:\Users\YoonJuhye\TIL\cs\os\os_06_Process Synchronization.assets\image-20220509202646474.png)
+  ![image-20220509202646474](week2_os_juhye.assets/image-20220509202646474.png)
 
   - a가 원래 0이었다면 0이 읽히고 1로 바뀜
   - Test_and_set(a)는 읽고 바꾸는 것을 atomic하게 수행함
@@ -954,7 +956,7 @@ Block & Wakeup 방식의 구현 (=sleep lock)
 
     - 이 프로세스의 PCB를 ready queue로 옮김
 
-      ![image-20220509204853902](C:\Users\YoonJuhye\TIL\cs\os\os_06_Process Synchronization.assets\image-20220509204853902.png)
+      ![image-20220509204853902](week2_os_juhye.assets/image-20220509204853902.png)
 
 
 
@@ -998,11 +1000,11 @@ Block & Wakeup 방식의 구현 (=sleep lock)
 
 - S와 Q가 1로 초기화된 semaphore라 하자.
 
-  ![image-20220509210152437](C:\Users\YoonJuhye\TIL\cs\os\os_06_Process Synchronization.assets\image-20220509210152437.png)
+  ![image-20220509210152437](week2_os_juhye.assets/image-20220509210152437.png)
 
   - S와 Q는 배타적. Q를 쓴 이후에 S를 내놓는 데 상대방을 기다리면서 영원히 자기 것은 내어놓지 않음
 
-  ![image-20220509210356661](C:\Users\YoonJuhye\TIL\cs\os\os_06_Process Synchronization.assets\image-20220509210356661.png)
+  ![image-20220509210356661](week2_os_juhye.assets/image-20220509210356661.png)
 
   - 자원을 획득하는 순서를 똑같이 맞춰주면 데드락 해결 가능
 
@@ -1031,7 +1033,7 @@ Block & Wakeup 방식의 구현 (=sleep lock)
 - 버퍼가 유한하기 때문에 생기는 문제: 생산자 입장에서는 사용할 자원이 없는 것이 됨. 소비자가 나타나서 내용을 꺼내가야 빈 버퍼가 생길 때가지 생산자는 기다려야 함. 소비자 입장에서는 꺼내갈 것이 없어서, 생산자가 내용을 만들어서 넣어줄 때까지 기다려야 함
 - 둘이 동시에 공유 버퍼에 접근하는 것을 막기 위해 lock을 걸어 배타적 접근을 하도록 함. 가용 자원을 세는 변수가 필요함
 
-![image-20220509211404469](C:\Users\YoonJuhye\TIL\cs\os\os_06_Process Synchronization.assets\image-20220509211404469.png)
+![image-20220509211404469](week2_os_juhye.assets/image-20220509211404469.png)
 
 - Shared data
   - buffer 자체 및 buffer 조작 변수(empty/full buffer의 시작 위치)
@@ -1043,7 +1045,7 @@ Block & Wakeup 방식의 구현 (=sleep lock)
 
 ### Bounded-Buffer Problem
 
-![image-20220509212040370](C:\Users\YoonJuhye\TIL\cs\os\os_06_Process Synchronization.assets\image-20220509212040370.png)
+![image-20220509212040370](week2_os_juhye.assets/image-20220509212040370.png)
 
 - 공유 버퍼: n개
 
@@ -1069,13 +1071,13 @@ Block & Wakeup 방식의 구현 (=sleep lock)
 
 
 
-![image-20220509213005761](C:\Users\YoonJuhye\TIL\cs\os\os_06_Process Synchronization.assets\image-20220509213005761.png)
+![image-20220509213005761](week2_os_juhye.assets/image-20220509213005761.png)
 
 
 
 ### Dining-Philosophers Problem
 
-![image-20220509210552293](C:\Users\YoonJuhye\TIL\cs\os\os_06_Process Synchronization.assets\image-20220509210552293.png)
+![image-20220509210552293](week2_os_juhye.assets/image-20220509210552293.png)
 
 - 다섯명의 철학자가 생각하는 시간과 밥 먹는 시간이 다름. 젓가락 두 개를 다 잡아야 함.
 
@@ -1093,7 +1095,7 @@ Block & Wakeup 방식의 구현 (=sleep lock)
   - 비대칭
     - 짝수(홀수) 철학자는 왼쪽(오른쪽) 젓가락부터 집도록
 
-  ![image-20220509213846593](C:\Users\YoonJuhye\TIL\cs\os\os_06_Process Synchronization.assets\image-20220509213846593.png)
+  ![image-20220509213846593](week2_os_juhye.assets/image-20220509213846593.png)
 
 
 
@@ -1108,11 +1110,11 @@ Block & Wakeup 방식의 구현 (=sleep lock)
 
 - 예
 
-  ![image-20220509214124669](C:\Users\YoonJuhye\TIL\cs\os\os_06_Process Synchronization.assets\image-20220509214124669.png)
+  ![image-20220509214124669](week2_os_juhye.assets/image-20220509214124669.png)
 
 - 동시 수행중인 프로세스 사이에서 abstract data type의 안전한 공유를 보장하기 위한 high-level synchronization construct
 
-  ![image-20220509214339846](C:\Users\YoonJuhye\TIL\cs\os\os_06_Process Synchronization.assets\image-20220509214339846.png)
+  ![image-20220509214339846](week2_os_juhye.assets/image-20220509214339846.png)
 
 
 
@@ -1136,10 +1138,10 @@ Block & Wakeup 방식의 구현 (=sleep lock)
 
   Suspend된 프로세스가 없으면 아무 일도 일어나지 않는다
 
-![image-20220509214652133](C:\Users\YoonJuhye\TIL\cs\os\os_06_Process Synchronization.assets\image-20220509214652133.png)
+![image-20220509214652133](week2_os_juhye.assets/image-20220509214652133.png)
 
 
 
 ### Bounded-Buffer Problem
 
-![image-20220509214554409](os_06_Process Synchronization.assets/image-20220509214554409.png)
+![image-20220509214554409](week2_os_juhye.assets/image-20220509214554409.png)
