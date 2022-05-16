@@ -11,13 +11,13 @@ p연산과 v연산을 통해 프로세스 동기화를 하지만, 모니터는 �
 
 - 예
 
-  ![image-20220509214124669](C:/Users/YoonJuhye/TIL/cs/os/os_06_Process Synchronization.assets/image-20220509214124669.png)
+  ![image-20220509214124669](week3_os_juhye.assets/image-20220509214124669.png)
 
 - 동시 수행중인 프로세스 사이에서 abstract data type의 안전한 공유를 보장하기 위한 high-level synchronization construct
 
   - 프로그램 안에서 동시접근하는 문제를 모니터가 자동으로 해결해줘서 프로그래머의 부담을 확연히 줄여줌
 
-  ![image-20220509214339846](C:/Users/YoonJuhye/TIL/cs/os/os_06_Process Synchronization.assets/image-20220509214339846.png)
+  ![image-20220509214339846](week3_os_juhye.assets/image-20220509214339846.png)
 
 
 
@@ -41,7 +41,7 @@ p연산과 v연산을 통해 프로세스 동기화를 하지만, 모니터는 �
 
   Suspend된 프로세스가 없으면 아무 일도 일어나지 않는다
 
-![image-20220509214652133](C:/Users/YoonJuhye/TIL/cs/os/os_06_Process Synchronization.assets/image-20220509214652133.png)
+![image-20220509214652133](week3_os_juhye.assets/image-20220509214652133.png)
 
 ​	모니터가 알아서 제어해주기 때문에 굳이 들어가기 전에 lock을 걸고 나올 때 lock을 풀 이유가 없어짐. 
 
@@ -57,9 +57,9 @@ full은 내용이 들어있는 버퍼 empty는 빈 버퍼를 기다리는 컨디
 
 세마포어보다 모니터버전이 훨씬 더 자연스러움
 
-![image-20220509214554409](C:/Users/YoonJuhye/TIL/cs/os/os_06_Process Synchronization.assets/image-20220509214554409.png)
+![image-20220509214554409](week3_os_juhye.assets/image-20220509214554409.png)
 
-![image-20220512021948980](C:/Users/YoonJuhye/TIL/cs/os/os_06_Process Synchronization.assets/image-20220512021948980.png)
+![image-20220512021948980](week3_os_juhye.assets/image-20220512021948980.png)
 
 세마포어에서는 lock을 거는 코드가 있고, 모니터 버전에서는 없음
 
@@ -73,7 +73,7 @@ full은 내용이 들어있는 버퍼 empty는 빈 버퍼를 기다리는 컨디
 
 ### Dining Pilosophers Example - Monitor ver
 
-![image-20220515222717543](C:/Users/YoonJuhye/TIL/cs/os/os_06_Process Synchronization.assets/image-20220515222717543.png)
+![image-20220515222717543](week3_os_juhye.assets/image-20220515222717543.png)
 
 ---
 
@@ -165,7 +165,7 @@ P(B);	P(A);
 
   - assignment edge Rj -> Pi
 
-    ![image-20220515224924573](C:/Users/YoonJuhye/TIL/cs/os/os_07_Deadlocks.assets/image-20220515224924573.png)
+    ![image-20220515224924573](week3_os_juhye.assets/image-20220515224924573.png)
 
     사이클이 있음
 
@@ -173,7 +173,7 @@ P(B);	P(A);
 
     2번 그림: p1이 자원2를 가지고 있고 자원1을 요청, p3이 자원1을 가지고 자원2를 요청하는데 여분이 하나씩 있고, 이 자원은 p2와 p4가 하나씩 가지고 사이클에 연루되어 있지 않기 때문에 쓰고 나서 반납하면 available 해져서 데드락이 아님
 
-![image-20220512024203885](C:\Users\YoonJuhye\AppData\Roaming\Typora\typora-user-images\image-20220512024203885.png)
+![](week3_os_juhye.assets/image-20220516224150972.png)
 
 ​				사이클이 없음
 
@@ -227,7 +227,7 @@ P(B);	P(A);
 - Circular wait (순환대기)
 
   - 모든 자원 유형에 할당 순서를 정하여 정해진 순서대로만 자원 할당
-  - 예를 들어 순서가 3인 자원 Ri를 보유 중인 프로세스가 순서 1인 자원 Rj을 할당받기 위해서는 우선 Ri를 release해야 한다
+  - 예를 들어 순서가 3인 자원 Ri를 보유 중인 프로세스가 순서 1인 자원 Rj을 할당받기 위해서는 우선  Ri를 release해야 한다
   - 낮은 순서의 자원을 먼저 획득해야만 다음 자원을 얻을 수 있게 함
 
 => Utilization 저하, throughput 감소, starvation 문제 (자원에 대한 이용률이 낮아지고 성능이 나빠지고 starvation의 문제가 발생할 수 있다.)
@@ -275,7 +275,7 @@ P(B);	P(A);
 
 - Cycle 생성 여부 조사시 프로세스의 수가 n일 때 O(n^2) 시간이 걸린다
 
-  ![image-20220515230208589](C:/Users/YoonJuhye/TIL/cs/os/os_07_Deadlocks.assets/image-20220515230208589.png)
+  ![image-20220515230208589](week3_os_juhye.assets/image-20220515230208589.png)
 
 ​		데드락이 아님 => P1이 2번자원을 요청할 수 있지만 아직 요청한 것이 아니므로. 
 
@@ -300,13 +300,13 @@ P(B);	P(A);
 
 ### Example of Banker's Algorithm
 
-![image-20220515233308394](C:/Users/YoonJuhye/TIL/cs/os/os_07_Deadlocks.assets/image-20220515233308394.png)
+![image-20220515233308394](week3_os_juhye.assets/image-20220515233308394.png)
 
 
 
 ### P1 request (1, 0, 2)
 
-![image-20220515234219093](C:/Users/YoonJuhye/TIL/cs/os/os_07_Deadlocks.assets/image-20220515234219093.png)
+![image-20220515234219093](week3_os_juhye.assets/image-20220515234219093.png)
 
 
 
@@ -327,13 +327,13 @@ P(B);	P(A);
     - **Wait-for graph에 사이클이 존재하는지를 주기적으로 조사**
     - O(n^2)
 
-![image-20220515234559520](C:/Users/YoonJuhye/TIL/cs/os/os_07_Deadlocks.assets/image-20220515234559520.png)
+![image-20220515234559520](week3_os_juhye.assets/image-20220515234559520.png)
 
-![image-20220515234920665](C:/Users/YoonJuhye/TIL/cs/os/os_07_Deadlocks.assets/image-20220515234920665.png)
+![image-20220515234920665](week3_os_juhye.assets/image-20220515234920665.png)
 
 => 데드락이 없는 상황
 
-![image-20220515234953665](C:/Users/YoonJuhye/TIL/cs/os/os_07_Deadlocks.assets/image-20220515234953665.png)
+![image-20220515234953665](week3_os_juhye.assets/image-20220515234953665.png)
 
 P2의 Request 001 인 경우 -> 데드락이 있음
 
@@ -414,7 +414,7 @@ P2의 Request 001 인 경우 -> 데드락이 있음
   - **하드웨어적인 지원이 필요** (ex. base and limit registers, MMU) - 주소 변환을 도와줌
   - 주소가 계속 바뀔 수 있음
 
-![image-20220516113052244](C:\Users\YoonJuhye\TIL\cs\os\os_08_Memory Management.assets\image-20220516113052244.png)
+![image-20220516113052244](week3_os_juhye.assets/image-20220516113052244.png)
 
 
 
@@ -436,7 +436,7 @@ P2의 Request 001 인 경우 -> 데드락이 있음
 
     ### Dynamic Relocation
 
-    ![image-20220516114046306](C:\Users\YoonJuhye\TIL\cs\os\os_08_Memory Management.assets\image-20220516114046306.png)
+    ![image-20220516114046306](week3_os_juhye.assets/image-20220516114046306.png)
 
     
 
@@ -448,7 +448,7 @@ P2의 Request 001 인 경우 -> 데드락이 있음
 
     ### hardware Support for Address Translation
 
-    ![image-20220516114657665](C:\Users\YoonJuhye\TIL\cs\os\os_08_Memory Management.assets\image-20220516114657665.png)
+    ![image-20220516114657665](week3_os_juhye.assets/image-20220516114657665.png)
 
     운영체제 및 사용자 프로세스 간의 메모리 보호를 위해 사용하는 레지스터
 
@@ -519,10 +519,9 @@ P2의 Request 001 인 경우 -> 데드락이 있음
 
 
 
+### Schematic View of Swapping
 
-	### Schematic View of Swapping
-
-![image-20220516115836339](C:\Users\YoonJuhye\TIL\cs\os\os_08_Memory Management.assets\image-20220516115836339.png)
+![image-20220516115836339](week3_os_juhye.assets/image-20220516115836339.png)
 
 
 
@@ -603,7 +602,7 @@ Swap Time? 보통 디스크를 접근하는 시간은 Seek Time(디스크 헤더
       - 기술적 관리 기법 필요
       - external fragmentation(외부 단편화) 발생
 
-​	![image-20220516135557982](C:\Users\YoonJuhye\TIL\cs\os\os_08_Memory Management.assets\image-20220516135557982.png)
+​	![image-20220516135557982](week3_os_juhye.assets/image-20220516135557982.png)
 
 - 프로그램 A는 분할 1에 넣으면 됨. 
 
@@ -625,7 +624,7 @@ Swap Time? 보통 디스크를 접근하는 시간은 Seek Time(디스크 헤더
     - a) 할당 공간
     - b) 가용 공간 (hole)
 
-    ![image-20220516140032943](C:\Users\YoonJuhye\TIL\cs\os\os_08_Memory Management.assets\image-20220516140032943.png)
+    ![image-20220516140032943](week3_os_juhye.assets/image-20220516140032943.png)
 
     프로그램을 실행할 때 가용곤간 어디에 프로그램을 할당할 것인지? Dynamic Storage-Allocation Problem
 
@@ -687,7 +686,7 @@ Swap Time? 보통 디스크를 접근하는 시간은 Seek Time(디스크 헤더
   - External fragmentation(외부 단편화) 발생 안함
   - Internal fragmentation(내부 단편화) 발생 가능
 
-![image-20220516164017911](C:\Users\YoonJuhye\TIL\cs\os\os_08_Memory Management.assets\image-20220516164017911.png)
+![image-20220516164017911](week3_os_juhye.assets/image-20220516164017911.png)
 
 => 프로그램을 구성하는 논리적 메모리를 동일한 크기의 Page로 잘라서 각각의 페이지별로 물리적 메모리 어디든 비어있는 위치에 올라갈 수 있게 해줌. 
 
@@ -710,7 +709,7 @@ Page Table : Page 갯수만큼 엔트리가 존재함
 
 ### Address Translation Architecture
 
-![image-20220516195836189](C:\Users\YoonJuhye\TIL\cs\os\os_08_Memory Management.assets\image-20220516195836189.png)
+![image-20220516195836189](week3_os_juhye.assets/image-20220516195836189.png)
 
 내부에서 상대적 위치는 똑같기 때문에 페이지 내의 offset은 주소 변환에 영향이 없고, 페이지 번호만 바뀜
 
@@ -733,7 +732,7 @@ Page Table : Page 갯수만큼 엔트리가 존재함
 
 ### Paging Hardware with TLB
 
-![image-20220516200415447](C:\Users\YoonJuhye\TIL\cs\os\os_08_Memory Management.assets\image-20220516200415447.png)
+![image-20220516200415447](week3_os_juhye.assets/image-20220516200415447.png)
 
 page table로 가기 전 먼저 TLB를 체크해서 주소변환이 가능한지 확인해서 접근 한 번을 줄임
 
@@ -766,7 +765,7 @@ page table로 가기 전 먼저 TLB를 체크해서 주소변환이 가능한지
 - Page Table 자체를 Page로 구성
 - 사용되지 않는 주소 공간에 대한 Outer Page Table의 엔트리 값은 NULL (대응하는 inner page Table이 없음)
 
-![image-20220516201247980](C:\Users\YoonJuhye\TIL\cs\os\os_08_Memory Management.assets\image-20220516201247980.png)
+![image-20220516201247980](week3_os_juhye.assets/image-20220516201247980.png)
 
 - logical address (on 32-bit machine with 4K page size)의 구성
 
@@ -780,7 +779,7 @@ page table로 가기 전 먼저 TLB를 체크해서 주소변환이 가능한지
 
 - 따라서, logical address는 다음과 같다
 
-  ![image-20220516202014473](C:\Users\YoonJuhye\TIL\cs\os\os_08_Memory Management.assets\image-20220516202014473.png)
+  ![image-20220516202014473](week3_os_juhye.assets/image-20220516202014473.png)
 
 - P1은 outer page table의 index이고
 
@@ -792,7 +791,7 @@ page table로 가기 전 먼저 TLB를 체크해서 주소변환이 가능한지
 
 - 2단계 페이징에서의 Address-translation scheme
 
-  ![image-20220516202124401](C:\Users\YoonJuhye\TIL\cs\os\os_08_Memory Management.assets\image-20220516202124401.png)
+  ![image-20220516202124401](week3_os_juhye.assets/image-20220516202124401.png)
 
 
 
@@ -826,7 +825,7 @@ page table로 가기 전 먼저 TLB를 체크해서 주소변환이 가능한지
 
 사용되지 않는 영역도 엔트리가 만들어져야 함 (6번, 7번) - 사용되지 않기 때문에 invalid로 표시
 
-![image-20220516203559085](C:\Users\YoonJuhye\TIL\cs\os\os_08_Memory Management.assets\image-20220516203559085.png)
+![image-20220516203559085](week3_os_juhye.assets/image-20220516203559085.png)
 
 
 
@@ -868,7 +867,7 @@ page table로 가기 전 먼저 TLB를 체크해서 주소변환이 가능한지
 
     -  Associative Register 사용 (expensive 비쌈)
 
-    ![image-20220516204210805](C:\Users\YoonJuhye\TIL\cs\os\os_08_Memory Management.assets\image-20220516204210805.png)
+    ![image-20220516204210805](week3_os_juhye.assets/image-20220516204210805.png)
 
 
 
@@ -891,7 +890,7 @@ page table로 가기 전 먼저 TLB를 체크해서 주소변환이 가능한지
   - 각 프로세스들은 독자적으로 메모리에 올림
   - Private Data는 Logical Address Space의 아무 곳에 와도 무방
 
-  ![image-20220516204732296](C:\Users\YoonJuhye\TIL\cs\os\os_08_Memory Management.assets\image-20220516204732296.png)
+  ![image-20220516204732296](week3_os_juhye.assets/image-20220516204644282.png)
 
 
 
@@ -941,7 +940,7 @@ page table로 가기 전 먼저 TLB를 체크해서 주소변환이 가능한지
 
 ​	세그먼트 길이보다 요구가 크지 않은지 체크
 
-![image-20220516205648641](C:\Users\YoonJuhye\TIL\cs\os\os_08_Memory Management.assets\image-20220516205648641.png)
+![image-20220516205648641](week3_os_juhye.assets/image-20220516205648641.png)
 
 
 
@@ -966,7 +965,7 @@ page table로 가기 전 먼저 TLB를 체크해서 주소변환이 가능한지
   - external fragmentation (외부 단편화) 발생
     - segment의 길이가 동일하지 않으므로 가변분할 방식에서와 동일한 문제점들이 발생
 
-  ![image-20220516210315114](C:\Users\YoonJuhye\TIL\cs\os\os_08_Memory Management.assets\image-20220516210315114.png)
+  ![image-20220516210315114](week3_os_juhye.assets/image-20220516210315114.png)
 
 페이징은 개수가 많지만 세그먼트는 개수가 몇 개 안됨. 
 
@@ -982,7 +981,7 @@ page table로 가기 전 먼저 TLB를 체크해서 주소변환이 가능한지
 
 두 개의 세그먼트는 같은 위치인 물리적 메모리에 위치하게 됨.
 
-![image-20220516210505476](C:\Users\YoonJuhye\TIL\cs\os\os_08_Memory Management.assets\image-20220516210505476.png)
+![image-20220516210505476](week3_os_juhye.assets/image-20220516210505476.png)
 
 
 
@@ -999,7 +998,7 @@ Paging 기법과 Segmetation 기법을 혼합하는 기법
 - 세그먼트 당 페이지가 존재할 것. 세그먼트의 길이가 얼마인지를 보면 됨. 세그먼트길이와 요청한 offset을 비교해서 그 이내일 경우에만 주소 변환을 해줌. d(세그먼트 offset) / (p, d) = (페이지번호, 페이지 offset)
 - 프레임번호, 오프셋 = 물리적 메모리 주소
 
-![image-20220516210828248](C:\Users\YoonJuhye\TIL\cs\os\os_08_Memory Management.assets\image-20220516210828248.png)
+![image-20220516210828248](week3_os_juhye.assets/image-20220516210828248.png)
 
 
 
