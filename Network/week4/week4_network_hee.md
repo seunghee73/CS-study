@@ -11,7 +11,7 @@
 
 ## Frame  
 
-![image-20220625210205527](C:\Users\cshhh\AppData\Roaming\Typora\typora-user-images\image-20220625210205527.png)  
+![image-20220625210205527](week4_network_hee.assets/image-20220625210205527.png)  
 
 <br>  
 
@@ -22,7 +22,7 @@
   * switch만 self-learning을 통해 switch port 수정  
 
 
-![image-20220625211419939](C:\Users\cshhh\AppData\Roaming\Typora\typora-user-images\image-20220625211419939.png)  
+![image-20220625211419939](week4_network_hee.assets/image-20220625211419939.png)  
 
   
 
