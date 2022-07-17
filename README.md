@@ -10,7 +10,7 @@
 
 [진주현](https://github.com/bonfire8)
 
-최승희
+[최승희](https://github.com/seunghee73)
 
 <br>
 
