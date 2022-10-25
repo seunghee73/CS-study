@@ -1,7 +1,5 @@
 ## ✔️ 웹 프로그래밍
 
-
-
 - JSP(Java Server Page)
   
   - HTML 파일 내에 JAVA 언어를 삽입한 문서
